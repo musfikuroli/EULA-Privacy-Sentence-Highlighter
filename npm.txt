@@ -1,0 +1,4 @@
+npm init
+npm i openai
+npm i compromise
+npm install @google-cloud/secret-manager

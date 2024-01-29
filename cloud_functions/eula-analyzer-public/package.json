@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@google-cloud/functions-framework": "^3.0.0",
+    "dotenv": "^16.3.1",
+    "cors": "^2.8.5",
+    "openai": "^4.19.0",
+    "compromise": "^14.11.0"
+  }
+}

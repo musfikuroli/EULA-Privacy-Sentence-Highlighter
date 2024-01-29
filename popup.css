@@ -1,0 +1,130 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  border: 2px solid black;
+  background-color: #f3f3f3;
+  border-radius: 10px; /* Add rounded corners to the body */
+}
+
+.container {
+  width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+  transform: scale(1.05);
+}
+
+.button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  color: #fff;
+  background-color: #3498db;
+  border: none;
+  border-radius: 5px; /* Rounded corners for the button */
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.button:hover {
+  background-color: #2980b9;
+}
+
+#data-container {
+  margin-top: 15px;
+}
+
+b {
+  font-weight: bold;
+  font-size: 14.5px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  padding-bottom: 0px;
+}
+
+p {
+  color: #666;
+  font-size: 13px;
+  padding-top: 0px;
+  padding-bottom: 20px;
+}
+
+/* Style for EULA Severity Rating container */
+.eula-rating-container {
+  margin-bottom: 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+
+/* Style for EULA Severity Rating text */
+.eula-rating-container p {
+  color: #333;
+  font-size: 18px;
+  margin: 0;
+}
+
+/* Style for the colored value in severity */
+.severity-value {
+  font-size: 18px;
+  /*text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add a subtle black shadow for better visibility */
+  /* Add any additional styles you want to apply */
+}
+
+/* Style for icons */
+.icon {
+  width: 45px;
+  height: 45px;
+  margin-right: 5px;
+}
+
+/* Style for icon container */
+.icon-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Style for severity indicator */
+.severity-indicator {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-left: 5px;
+  border: 2px solid black; /* Add a black border */
+}
+
+.loading-bar {
+  border: 8px solid #f3f3f3; /* Light grey */
+  border-top: 8px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -20px;
+  margin-left: -20px;
+  display: none; /* Initially hide the loading bar */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

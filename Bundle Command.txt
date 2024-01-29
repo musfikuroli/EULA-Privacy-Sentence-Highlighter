@@ -1,0 +1,72 @@
+Step 1: Install Node.js and npm
+
+If you haven't already, install Node.js and npm (Node Package Manager) on your system. You can download them from the official website: https://nodejs.org/
+
+
+
+
+Step 2: Initialize Your Project
+
+If you haven't already initialized your Chrome extension project, open your project directory in your terminal and run:
+
+npm init
+Follow the prompts to create a package.json file for your project.
+
+
+
+
+Step 3: Install Webpack and Required Dependencies
+
+In your project directory, install Webpack and its related dependencies:
+
+npm install webpack webpack-cli --save-dev
+
+
+
+
+Step 4: Create a Webpack Configuration File
+
+Create a webpack.config.js file in your project directory. This file will configure how Webpack bundles your code.
+
+// webpack.config.js
+
+const path = require("path");
+
+module.exports = {
+  entry: "./contentScript.js", // Adjust the entry point as needed
+  mode: "development", // or 'production'
+  output: {
+    filename: "contentBundle.js", // Name of the bundled file
+    path: path.resolve(__dirname, "dist"), // Output directory
+  },
+};
+Make sure to replace "./contentScript.js" with the correct path to your content script file.
+
+
+
+Step 5: Bundle Your Content Script
+
+In your terminal, run Webpack to bundle your content script:
+
+npx webpack --config webpack.config.js
+This will create a contentBundle.js file in the dist directory.
+
+
+
+Step 6: Update Your manifest.json
+
+In your manifest.json file, update the "content_scripts" section to use the bundled script:
+
+"content_scripts": [
+  {
+    "matches": ["<all_urls>"],
+    "js": ["dist/contentBundle.js"] // Update the path accordingly
+  }
+],
+
+
+
+
+Step 7: Run Your Extension
+
+Now, load your extension into Chrome and test it to ensure that the bundled content script works as expected.
